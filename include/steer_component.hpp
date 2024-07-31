@@ -24,12 +24,12 @@ private:
     rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pub_;
 
     cv::Mat image_;
-    
+    cv::Size inputSize_;    
     cv::dnn::Net net_;
 
     void image_callback(const sensor_msgs::msg::Image &msg);
 };
 
-} // namespace cnn_ros
+} // namespace self_drive
 
 #endif // STEER_COMPONENT_HPP
